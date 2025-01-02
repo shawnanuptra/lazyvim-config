@@ -6,8 +6,8 @@
 vim.opt.guicursor = "n-v-i-c:block-Cursor"
 
 -- add catppuccin colorscheme
-return {
-  colorscheme = function()
-    require("catppuccin").load()
-  end,
-}
+-- return {
+--   colorscheme = function()
+--     require("catppuccin").load()
+--   end,
+-- }

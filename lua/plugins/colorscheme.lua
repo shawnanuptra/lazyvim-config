@@ -4,12 +4,14 @@ return {
     lazy = true,
     name = "catppuccin",
     opts = {
+      transparent_background = true,
       integrations = {
         aerial = true,
         alpha = true,
         cmp = true,
         dashboard = true,
         flash = true,
+        fzf = true,
         grug_far = true,
         gitsigns = true,
         headlines = true,
@@ -35,22 +37,18 @@ return {
         noice = true,
         notify = true,
         semantic_tokens = true,
+        snacks = true,
         telescope = true,
         treesitter = true,
         treesitter_context = true,
         which_key = true,
       },
     },
-    specs = {
-      {
-        "akinsho/bufferline.nvim",
-        optional = true,
-        opts = function(_, opts)
-          if (vim.g.colors_name or ""):find("catppuccin") then
-            opts.highlights = require("catppuccin.groups.integrations.bufferline").get()
-          end
-        end,
-      },
+  },
+  {
+    "LazyVim/LazyVim",
+    opts = {
+      colorscheme = "catppuccin-mocha",
     },
   },
 }
